@@ -76,7 +76,7 @@ let names = ['haadi', 'bisma', 'ali', 'osman', 'maryam', 'rizwan'];
 let userSearch = prompt('Search a name');
 let convertSearch = userSearch.toLowerCase();
 let found = false;
- for(i=0; i<names.length; i++){
+ for(let i=0; i<names.length; i++){
     if(convertSearch == names[i]){
         alert('Found');
         found = true;
@@ -95,6 +95,23 @@ for (let i = 0; i < numbers.length; i++) {
 
 alert('Sum of all numbers in array: ' + sum);
 
+// even and odd numbers
+let nums = [9, 10, 7, 2, 1, 8];
+let evenNum = [];
+let oddNum = [];
+
+for(let i = 0; i<nums.length; i++){
+    if(nums[i]%2 == 0){
+        evenNum.push(nums[i]);
+    }else{
+        oddNum.push(nums[i]);
+    }
+}
+console.log('original array ' , nums);
+console.log('even number array ' , evenNum);
+console.log('odd number array ' , oddNum);
+
+
 // palindrome
 let word = prompt("Enter a word:");
 let reverse = "";
@@ -108,3 +125,21 @@ if (word === reverse) {
 } else {
     alert("Not a Palindrome");
 }
+
+//min and max value
+let numberArr = [50, 10, 25, 56, 44, 88, 78, 89];
+
+let min = numberArr[0];
+let max = numberArr[0];
+
+for (let i = 1; i < numberArr.length; i++) {
+    if (numberArr[i] < min) {
+        min = numberArr[i];
+    }
+    if (numberArr[i] > max) {
+        max = numberArr[i];
+    }
+}
+
+console.log("Min value: " , min);
+console.log("Max value: " , max);
